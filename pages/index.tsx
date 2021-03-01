@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 
+
+// blocks 
+import Header from 'components/blocks/Header'
+
 export default function Home() {
   return (
 
@@ -9,8 +13,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
+    <Header />
+      <main >
         <h1>Hello from canva</h1>
       </main>
 
