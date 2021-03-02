@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 // COMPONENTS
 import Link from 'components/atoms/Links'
+import { LinkButton, SolidButton, TransparentButton } from 'components/atoms/button'
 
 
 const Header: React.FC = () => {
@@ -12,29 +13,35 @@ const Header: React.FC = () => {
         <HeaderComponent>
             <HeaderInner>
                 <NavLinks>
-                    <Link
-                        size="1.5"
+                    <LinkButton
                         colour="fff"
-                        w="600"
                     >
                         Home
-                    </Link>
-                    <Link
-                    size="1.5"
-                    colour="fff"
-                     w="600"
-                >
-                    Home
-                </Link> <Link
-                    size="1.5"
-                    colour="fff"
-                     w="600"
-                >
-                    Home
-                </Link>
+                    </LinkButton>
+                    <LinkButton
+                        colour="fff"
+                    >
+                        File
+                    </LinkButton>
+                    <LinkButton
+                        colour="fff"
+                    >
+                        Resize
+                    </LinkButton>
                 </NavLinks>
                <Controls>
-                   <button>Hello world</button>
+                  <TransparentButton colour="fff">
+                      Try Canva pro
+                  </TransparentButton>
+                  <TransparentButton colour="fff">
+                      Share
+                  </TransparentButton>
+                  <SolidButton colour="000" >
+                  <i className="fas fa-long-arrow-alt-down"></i> Download
+                  </SolidButton>
+                  <SolidButton colour="000" >
+                  <i className="fas fa-ellipsis-h" style={{padding: "4px 0"}}></i> 
+                  </SolidButton>
                </Controls>
             </HeaderInner>
         </HeaderComponent>
@@ -54,18 +61,20 @@ justify-content: space-between;
 
 const NavLinks = styled.div`
 display: flex;
-justify-content:  space-between;
 align-items: center;
-flex-basis: 20%;
+
+
 `
 
 
 const Controls = styled.div`
 display: flex;
-justify-content: space-between;
 align-items: center;
-flex-basis: 60%;
 justify-content: flex-end;
+
+& * {
+    margin: 0 5px;
+}
 `
 
 // const Overlay = styled.div`

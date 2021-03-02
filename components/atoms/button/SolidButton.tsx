@@ -1,38 +1,43 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 
 interface ButtonProps {
-    readonly size: string,
-    readonly color: string,
-    readonly bgColor: string
+    colour: string
 }
 
-interface IProps extends ButtonProps {
-    children: React.ReactNode;
+interface Iprops extends ButtonProps {
+    children: ReactNode
 }
 
-const ButtonComponent: React.FC<IProps> = ({size, color, bgColor, children}: IProps) => {
+const SolidButton: FC<Iprops> = ({ colour, children}: Iprops) => {
     return (
-        <Button
-            size={size}
-            color={color}
-            bgColor={bgColor}
-        >
+        <Button colour={colour} >
             {children}
         </Button>
     )
 }
 
-const Button = styled.button<ButtonProps>`
+
+const Button  =styled.a<ButtonProps>`
 display: flex;
 align-items: center;
 outline: none;
 border: none;
+font-size: 1.5rem;
+padding: 10px 15px;
+color: #${props => props.colour};
+background-color: rgba(255, 255, 255);
 
+&:hover {
+    background-color: rgba(255,255,255, 0.2);
+    cursor: pointer;
+}
 
-font-size: ${props => props.size}em;
-color: ${props => props.color};
-background-color: ${props => props.bgColor};
+i {
+    color: #${props => props.colour};
+}
 `
 
-export default ButtonComponent
+
+
+export default SolidButton
