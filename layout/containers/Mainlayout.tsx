@@ -15,6 +15,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
 }
+html, body {
+    font-size: 10px;
+}
 `
 
 const MainLayout: React.FC<Iprops>  = ({children}: Iprops) => {

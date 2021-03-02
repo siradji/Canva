@@ -23,7 +23,7 @@ const index: React.FC<Iprops> = ({size, colour, w, children}: Iprops) => {
 
 const Link = styled.a<LinkProp>`
     color: #${props => props.colour};
-    font-size: ${props => props.size}em;
+    font-size: ${props => props.size}rem;
     font-weight: ${props => props.w};
     display: flex;
     align-items: center;

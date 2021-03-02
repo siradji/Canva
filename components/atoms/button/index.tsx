@@ -29,6 +29,7 @@ align-items: center;
 outline: none;
 border: none;
 
+
 font-size: ${props => props.size}em;
 color: ${props => props.color};
 background-color: ${props => props.bgColor};
